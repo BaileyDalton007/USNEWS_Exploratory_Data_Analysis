@@ -3,12 +3,12 @@
 To analyize and present observations and trends I found interesting while exploring the [USNEWS](https://www.usnews.com/best-colleges/rankings/national-universities) college rankings dataset.
 
 ## About the Data
-I scraped the data for this project from the USNEWS website. If you would like to scrape recent data, see a more indepth description of the data, or download the dataset used in this EDA, see that repository [here](https://github.com/BaileyDalton007/USNEWS_College_Webscraping).
+I scraped the data for this project from the USNEWS website. If you would like to scrape recent data, see a more in-depth description of the data, or download the dataset used in this EDA, see that repository [here](https://github.com/BaileyDalton007/USNEWS_College_Webscraping).
 
 ## Figures
 If you would like to have a closer look at the code or run it yourself, see `data_analysis.ipynb`.
 
-### USNEWS Score and Rank
+## USNEWS Score and Rank
 Considering that USNEWS [claims](https://www.usnews.com/education/best-colleges/articles/how-us-news-calculated-the-rankings) that the rankings are based off of each school's score, we can assume that the two features should be highly correlated. I decided to test it by plotting them against each other and got an interesting result.
 
 ![png](README_files/outlier_plot.png)
@@ -29,7 +29,7 @@ And here is the correct plot, indeed what we expected.
 ![png](README_files/README_3_0.png)
 
 
-### Correlation Heatmaps
+## Correlation Heatmaps
 
 A full correlation heatmap showing how all the quantitative varibles affect
 one another. We are using a symmetrical colormap so that the
@@ -48,26 +48,26 @@ This one is similar to the last one, but splits the data into two subsets based 
 
 I used these heatmaps as a roadmap for the rest of this analysis, investigating both the suprisingly high correlations, and the suprisingly low.
 
-#### Observations
+### Observations
 Of course now that those outliers from the last figure are fixed, usnews_score has a high negative correlation with rank. I do think it is interesting how the year that a school was founded doesn't correlate with rank more, as when you think of top schools-one may often think of the Ivy League, which is composed of some of the oldest schools in the nation (Harvard being the oldest in the US). I also find the difference in correlation for tutition along with acceptance rate between public and private to be interesting.
 
 
-### Ranking Distrubitions
+## Ranking Distrubitions
 USNEWS does not just rank all 300 or so schools sequentially, it is full of ties for certain ranks. To better understand the distribution of these ranks, I plotted them. 
 
 ![png](README_files/README_6_0.png)
     
 ![png](README_files/README_7_0.png)
     
-#### Observations
+### Observations
 It seems that the schools toward the beginning are much more spread out and more finely sorted and the farther you go down the ranks, the more clumped together they become. This makes sense as people often care about the exact rankings of the very best, but very few will care the difference in a rank or two in the 200+ range.
 
-### Public vs. Private Schools
+## Public vs. Private Schools
 In this section we will be comparing public and private schools and how their type affects their ranking. 
 
 ![png](README_files/README_8_0.png)
     
-Here we can see that the amount and average rank of public vs. private schools are near equal with private having a few less school and just a bit better of an average ranking.
+Here we can see that the amount and average rank of public vs. private schools are near equal with private having a few less schools and just a bit better of an average ranking.
 
 
 ![png](README_files/README_9_0.png)
@@ -91,7 +91,7 @@ Here we are comparing the starting salary to full price ratio. This represents t
 
 We can see a trend that private schools are slightly harder to pay off, which makes sense due to their higher tuition. That first outlier is Brigham Young University--Provo with a tuition of $6,120.
 
-### Categorical Variables
+## Categorical Variables
 Here we are looking at pie charts and box plots showing the distributions of collegiate sports associations and location types.
 
 ![png](README_files/README_12_0.png)
@@ -99,7 +99,7 @@ Here we are looking at pie charts and box plots showing the distributions of col
     
 ![png](README_files/README_13_0.png)
 
-#### Observations
+### Observations
 Not a whole lot suprising here. It is interesting how NCAA II and NAIA are concentrated heavily toward the end of the rankings. The same can be said for rural located schools.
 
 
@@ -115,16 +115,16 @@ Here the universities are seperated into buckets (10 in this case) and the avera
 
 ![png](README_files/README_16_0.png)
     
-Here as well we can see the importants of a >1400 decreasing and the concentration of 1000-1199 and 1200-1399 scores increasing. It can also be noted that some of the later buckets do not go up to 100% because of those <800 scores that were dropped earlier.
+Here as well we can see the importance of a >1400 decreasing and the concentration of 1000-1199 and 1200-1399 scores increasing. It can also be noted that some of the later buckets do not go up to 100% because of those <800 scores that were dropped earlier.
     
 
-### Enrollment Numbers
+## Enrollment Numbers
 
 Here we can see enrollment numbers based on rank of both undergraduate and graduate students. 
 
 ![png](README_files/README_18_0.png)
 
-#### Observations
-It is clear that size of the school does not really affect rank. We can see that there are considerably less graduate students at most schools than there are undergraduate students
+### Observations
+It is clear that size of the school's undergraduate population does not really affect rank, but we can see that the very top schools tend to have a high number of graduate students. We can see that there are considerably less graduate students at most schools than there are undergraduate students
     
 
